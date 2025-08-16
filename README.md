@@ -1,5 +1,18 @@
 # PyTorch Feedforward Neural Network Design: Development Concepts and Comparisons
 
+## Features
+- Data loading & preprocessing with **TorchText**
+- Multiple neural network variations:
+  1. Basic Feedforward
+  2. Batch Normalization
+  3. LeakyReLU / ReLU6 Activation
+  4. L2 Regularization
+  5. Two Hidden Layers + Softmax
+- Training metrics: Loss & Accuracy (per epoch)
+- Comparison plots across model variations
+- Review predictions with probability distributions
+- Save & load trained models for reuse
+  
 ## Steps 1 to 5
 
 ## 1. Feedforward Neural Network for Multi-Class Classification
@@ -128,19 +141,26 @@ F.softmax(logits, dim=1)
 
 ***
 # Usage Guidelines
-- Install `requirements.txt`
-- python main.py
+- Clone this repository:
+   ```bash
+   git clone https://github.com/anishchapagain/imdb_deeplearning.git
+   cd imdb_deeplearning
+   python -m venv .venv
+   .venv\Scripts\activate
+   pip install -r requirements.txt
+   python main.py
+   ```
 - Terminal output will generate:
   - **Sample IMDB reviews**
   - **Individual training model by steps:**
-  - ```
---- Training Model: L2_Regularization | Device: cpu ---
-Epoch 01 | Train Loss: 0.6182 | Train Acc: 65.62% | Val Loss: 0.6207 | Val Acc: 66.74%
-
---- Training Model: Two_HidLayers_SoftMax | Device: cpu ---
-Epoch 01 | Train Loss: 0.6153 | Train Acc: 65.78% | Val Loss: 0.6378 | Val Acc: 63.82%
-Epoch 02 | Train Loss: 0.5267 | Train Acc: 73.72% | Val Loss: 0.5750 | Val Acc: 70.78%
-```
+    ```
+        --- Training Model: L2_Regularization | Device: cpu ---
+        Epoch 01 | Train Loss: 0.6182 | Train Acc: 65.62% | Val Loss: 0.6207 | Val Acc: 66.74%
+        
+        --- Training Model: Two_HidLayers_SoftMax | Device: cpu ---
+        Epoch 01 | Train Loss: 0.6153 | Train Acc: 65.78% | Val Loss: 0.6378 | Val Acc: 63.82%
+        Epoch 02 | Train Loss: 0.5267 | Train Acc: 73.72% | Val Loss: 0.5750 | Val Acc: 70.78%
+    ```
 
   - **Summary Table** (3 Epoch)
 ```| Step                    | Final Train Accuracy (%) | Final Val Accuracy (%) | Final Train Loss | Final Val Loss |
@@ -155,7 +175,16 @@ Epoch 02 | Train Loss: 0.5267 | Train Acc: 73.72% | Val Loss: 0.5750 | Val Acc: 
     ```
     - 13  This movie was a complete disappointment from ...              Negative  ...                   Negative               [0.97, 0.03]
     - 5      The movie was absolutely fantastic! I love it.              Positive  ...                   Positive               [0.05, 0.95]
+    ```
+## Project Structure
 ```
+├── main.py              # Main training & evaluation pipeline
+├── requirements.txt     # Dependencies
+├── plots/               # Training/validation plots (generated)
+├── models/              # Saved model checkpoints
+└── README.md            # Documentation
+```
+
 # Summary
 
 - **Feedforward Neural Networks in PyTorch** are flexible and powerful for both binary and multi-class classification.
