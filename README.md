@@ -133,27 +133,29 @@ F.softmax(logits, dim=1)
 - Terminal output will generate:
   - **Sample IMDB reviews**
   - **Individual training model by steps:**
+  - ```
 --- Training Model: L2_Regularization | Device: cpu ---
 Epoch 01 | Train Loss: 0.6182 | Train Acc: 65.62% | Val Loss: 0.6207 | Val Acc: 66.74%
 
 --- Training Model: Two_HidLayers_SoftMax | Device: cpu ---
 Epoch 01 | Train Loss: 0.6153 | Train Acc: 65.78% | Val Loss: 0.6378 | Val Acc: 63.82%
 Epoch 02 | Train Loss: 0.5267 | Train Acc: 73.72% | Val Loss: 0.5750 | Val Acc: 70.78%
-
+```
 
   - **Summary Table** (3 Epoch)
-| Step                    | Final Train Accuracy (%) | Final Val Accuracy (%) | Final Train Loss | Final Val Loss |
+```| Step                    | Final Train Accuracy (%) | Final Val Accuracy (%) | Final Train Loss | Final Val Loss |
 | ----------------------- | ------------------------ | ---------------------- | ---------------- | -------------- |
 | BasicFeedforward        | 78.04                    | 73.40                  | 0.461            | 0.545          |
 | BatchNorm               | 79.20                    | 64.12                  | 0.445            | 0.750          |
 | LeakyReLU\_Activation   | 78.06                    | 69.01                  | 0.458            | 0.614          |
 | L2\_Regularization      | 77.49                    | 75.15                  | 0.471            | 0.508          |
 | Two\_HidLayers\_SoftMax | 78.91                    | 73.89                  | 0.449            | 0.527          |
-
+```
   - **Review Predictions** (From various Steps or Questions)
+    ```
     - 13  This movie was a complete disappointment from ...              Negative  ...                   Negative               [0.97, 0.03]
     - 5      The movie was absolutely fantastic! I love it.              Positive  ...                   Positive               [0.05, 0.95]
-
+```
 # Summary
 
 - **Feedforward Neural Networks in PyTorch** are flexible and powerful for both binary and multi-class classification.
