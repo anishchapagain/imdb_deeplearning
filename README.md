@@ -1,4 +1,6 @@
-# PyTorch Feedforward Neural Network Design: Concepts \& Comparisons
+# PyTorch Feedforward Neural Network Design: Development Concepts and Comparisons
+
+## Steps 1 to 5
 
 ## 1. Feedforward Neural Network for Multi-Class Classification
 
@@ -78,7 +80,7 @@ elif activation=="leakyrelu": act_fn = nn.LeakyReLU(0.01)
 
 ### Core Technology
 
-**L2 Regularization** penalizes large weight values to reduce model complexity and overfitting. In PyTorch, this is implemented as `weight_decay` in the optimizer, which adds the L2 penalty to the loss function.
+**L2 Regularization** penalizes large weight values to reduce model complexity and overfitting. Implemented as `weight_decay` in the optimizer, which adds the L2 penalty to the loss function.
 
 ### Implementation
 
@@ -112,8 +114,6 @@ F.softmax(logits, dim=1)
 ```
 
 **Usage:** Two hidden layers with BatchNorm and ReLU improve representational capacity; softmax converts final logits to class probabilities.
-
-***
 
 # Conceptual Comparison Table
 
