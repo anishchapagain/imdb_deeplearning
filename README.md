@@ -14,7 +14,7 @@ A **Feedforward Neural Network (FNN)** is the simplest form of artificial neural
 - Output Layer: Uses `nn.Linear` with `num_classes` output units.
 
 
-### Implementation (from your file)
+### Implementation
 
 ```python
 class SentimentFFN(nn.Module):
@@ -135,4 +135,4 @@ F.softmax(logits, dim=1)
 - **L2 regularization** is a practical way to improve generalization (without dropout).
 - **Adding deeper layers and softmax output** enables richer feature learning and interpretable probability outputs.
 
-Each design variant tackles different real-world model training challenges—stability, abstraction, generalization, and interpretability. Your project demonstrates these by showing metrics, plots, and predictions for each configuration, making it a practical learning reference for PyTorch neural network design.
+Each design variant tackles different real-world model training challenges—stability, abstraction, generalization, and interpretability. Project demonstrates these by showing metrics, plots, and predictions for each configuration, making it a practical learning reference for PyTorch neural network design.
