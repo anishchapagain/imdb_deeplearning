@@ -127,6 +127,9 @@ F.softmax(logits, dim=1)
 
 
 ***
+# Usage
+- Install `requirements.txt`
+- python main.py 
 
 # Summary
 
